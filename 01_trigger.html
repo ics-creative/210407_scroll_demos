@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style></style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/ityped@1.0.3"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="top">
+      <h1 class="top_title">Scroll Trigger Demo1</h1>
+      <svg
+        class="top_icon"
+        xmlns="http://www.w3.org/2000/svg"
+        height="110px"
+        viewBox="0 0 24 24"
+        width="110px"
+        fill="#000000"
+      >
+        <path d="M24 24H0V0h24v24z" fill="none" opacity=".87" />
+        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" />
+      </svg>
+    </section>
+    <section class="section">
+      <div class="card card__left">
+        <figure class="card_figure">
+          <img
+            class="card_img"
+            src="./images/pexels-asad-photo-maldives-3293148.jpg"
+            alt=""
+          />
+        </figure>
+        <h2 class="card_title"></h2>
+        <p class="card_text">
+          サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+        </p>
+      </div>
+      <div class="card card__right">
+        <figure class="card_figure">
+          <img
+            class="card_img"
+            src="./images/pexels-luis-del-río-15286.jpg"
+            alt=""
+          />
+        </figure>
+        <h2 class="card_title">タイトル</h2>
+        <p class="card_text">
+          サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+        </p>
+      </div>
+      <div class="card card__left">
+        <figure class="card_figure">
+          <img
+            class="card_img"
+            src="./images/pexels-sam-kolder-2387873.jpg"
+            alt=""
+          />
+        </figure>
+        <h2 class="card_title">タイトル</h2>
+        <p class="card_text">
+          サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+        </p>
+      </div>
+    </section>
+    <section class="bottom">
+      <svg
+        class="likeButton"
+        width="150px"
+        height="150px"
+        viewBox="0 0 500 500"
+      >
+        <circle class="explosion" r="150" cx="250" cy="250"></circle>
+        <g class="particleLayer">
+          <circle fill="#8CE8C3" cx="130" cy="126.5" r="12.5" />
+          <circle fill="#8CE8C3" cx="411" cy="313.5" r="12.5" />
+          <circle fill="#91D2FA" cx="279" cy="86.5" r="12.5" />
+          <circle fill="#91D2FA" cx="155" cy="390.5" r="12.5" />
+          <circle fill="#CC8EF5" cx="89" cy="292.5" r="10.5" />
+          <circle fill="#9BDFBA" cx="414" cy="282.5" r="10.5" />
+          <circle fill="#9BDFBA" cx="115" cy="149.5" r="10.5" />
+          <circle fill="#9FC7FA" cx="250" cy="80.5" r="10.5" />
+          <circle fill="#9FC7FA" cx="78" cy="261.5" r="10.5" />
+          <circle fill="#96D8E9" cx="182" cy="402.5" r="10.5" />
+          <circle fill="#CC8EF5" cx="401.5" cy="166" r="13" />
+          <circle fill="#DB92D0" cx="379" cy="141.5" r="10.5" />
+          <circle fill="#DB92D0" cx="327" cy="397.5" r="10.5" />
+          <circle fill="#DD99B8" cx="296" cy="392.5" r="10.5" />
+        </g>
+        <path
+          class="heart"
+          d="M250,187.4c-31.8-47.8-95.5-19.8-95.5,32.2c0,35.2,31.8,60.3,55.7,79.2c24.9,19.7,31.8,23.9,39.8,31.8 c7.9-7.9,14.6-12.6,39.8-31.8c24.3-18.5,55.7-44.4,55.7-79.6C345.5,167.6,281.8,139.7,250,187.4z"
+        />
+      </svg>
+      <svg
+        class="likeButton"
+        width="150px"
+        height="150px"
+        viewBox="0 0 500 500"
+      >
+        <circle class="explosion" r="150" cx="250" cy="250"></circle>
+        <g class="particleLayer">
+          <circle fill="#8CE8C3" cx="130" cy="126.5" r="12.5" />
+          <circle fill="#8CE8C3" cx="411" cy="313.5" r="12.5" />
+          <circle fill="#91D2FA" cx="279" cy="86.5" r="12.5" />
+          <circle fill="#91D2FA" cx="155" cy="390.5" r="12.5" />
+          <circle fill="#CC8EF5" cx="89" cy="292.5" r="10.5" />
+          <circle fill="#9BDFBA" cx="414" cy="282.5" r="10.5" />
+          <circle fill="#9BDFBA" cx="115" cy="149.5" r="10.5" />
+          <circle fill="#9FC7FA" cx="250" cy="80.5" r="10.5" />
+          <circle fill="#9FC7FA" cx="78" cy="261.5" r="10.5" />
+          <circle fill="#96D8E9" cx="182" cy="402.5" r="10.5" />
+          <circle fill="#CC8EF5" cx="401.5" cy="166" r="13" />
+          <circle fill="#DB92D0" cx="379" cy="141.5" r="10.5" />
+          <circle fill="#DB92D0" cx="327" cy="397.5" r="10.5" />
+          <circle fill="#DD99B8" cx="296" cy="392.5" r="10.5" />
+        </g>
+        <path
+          class="heart"
+          d="M250,187.4c-31.8-47.8-95.5-19.8-95.5,32.2c0,35.2,31.8,60.3,55.7,79.2c24.9,19.7,31.8,23.9,39.8,31.8 c7.9-7.9,14.6-12.6,39.8-31.8c24.3-18.5,55.7-44.4,55.7-79.6C345.5,167.6,281.8,139.7,250,187.4z"
+        />
+      </svg>
+      <svg
+        class="likeButton"
+        width="150px"
+        height="150px"
+        viewBox="0 0 500 500"
+      >
+        <circle class="explosion" r="150" cx="250" cy="250"></circle>
+        <g class="particleLayer">
+          <circle fill="#8CE8C3" cx="130" cy="126.5" r="12.5" />
+          <circle fill="#8CE8C3" cx="411" cy="313.5" r="12.5" />
+          <circle fill="#91D2FA" cx="279" cy="86.5" r="12.5" />
+          <circle fill="#91D2FA" cx="155" cy="390.5" r="12.5" />
+          <circle fill="#CC8EF5" cx="89" cy="292.5" r="10.5" />
+          <circle fill="#9BDFBA" cx="414" cy="282.5" r="10.5" />
+          <circle fill="#9BDFBA" cx="115" cy="149.5" r="10.5" />
+          <circle fill="#9FC7FA" cx="250" cy="80.5" r="10.5" />
+          <circle fill="#9FC7FA" cx="78" cy="261.5" r="10.5" />
+          <circle fill="#96D8E9" cx="182" cy="402.5" r="10.5" />
+          <circle fill="#CC8EF5" cx="401.5" cy="166" r="13" />
+          <circle fill="#DB92D0" cx="379" cy="141.5" r="10.5" />
+          <circle fill="#DB92D0" cx="327" cy="397.5" r="10.5" />
+          <circle fill="#DD99B8" cx="296" cy="392.5" r="10.5" />
+        </g>
+        <path
+          class="heart"
+          d="M250,187.4c-31.8-47.8-95.5-19.8-95.5,32.2c0,35.2,31.8,60.3,55.7,79.2c24.9,19.7,31.8,23.9,39.8,31.8 c7.9-7.9,14.6-12.6,39.8-31.8c24.3-18.5,55.7-44.4,55.7-79.6C345.5,167.6,281.8,139.7,250,187.4z"
+        />
+      </svg>
+      <div class="bottom_text">
+        <span class="ityped"></span>
+      </div>
+    </section>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      // トップの矢印の往復アニメーション
+      gsap.to(".top_icon", { y: 20, yoyo: true, repeat: -1 });
+      // カードがスクロールに合わせて出現
+      document.querySelectorAll(".card").forEach((el) => {
+        gsap.fromTo(
+          el,
+          { y: 50, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            scrollTrigger: {
+              trigger: el,
+              start: "top 80%",
+              ease: "Power2.inOut",
+            },
+          }
+        );
+      });
+
+      // パーティクル生成
+      const buttons = document.querySelectorAll(".likeButton");
+      buttons.forEach((el) => {
+        ScrollTrigger.create({
+          trigger: el,
+          start: "top 90%",
+          toggleClass: "clicked",
+          once: true,
+        });
+      });
+
+      // タイピングアニメーションの発火
+      function initTypeAnim() {
+        ityped.init(document.querySelector(".ityped"), {
+          strings: ["ICS MEDIA"], //表示させたい文字の設定 区切りはカンマ
+          startDelay: 200, //アニメーション開始までの遅延、大きいほど遅れる
+          typeSpeed: 80, //表示させるスピード、大きいほどゆっくり
+          loop: false, //ループ
+          backSpeed: 80, //戻るスピード
+          backDelay: 150, //戻る時間指定
+          showCursor: true, //カーソル表示
+          cursorChar: "|", //カーソルとして表示するテキスト
+        });
+      }
+      ScrollTrigger.create({
+        trigger: ".ityped",
+        start: "top 55%",
+        onEnter: initTypeAnim,
+        once: true,
+      });
+    </script>
+  </body>
+</html>
