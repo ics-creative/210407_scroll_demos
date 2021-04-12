@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style></style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/ityped@1.0.3"></script>
+    <link rel="stylesheet" href="./styles/style_02.css" />
+  </head>
+  <body>
+    <div class="header-line">
+      <div class="header-line_inner"></div>
+    </div>
+    <section class="top">
+      <div class="top_title">
+        <span>T</span>
+        <span>i</span>
+        <span>t</span>
+        <span>l</span>
+        <span>e</span>
+      </div>
+    </section>
+    <section class="section">
+      <div class="card">
+        <div>
+          <h2 class="card_title">タイトル</h2>
+          <p class="card_text">
+            サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+          </p>
+        </div>
+        <figure class="card_figure">
+          <img
+            class="card_img"
+            src="https://picsum.photos/id/1015/600/400"
+            alt=""
+          />
+        </figure>
+      </div>
+      <div class="card">
+        <figure class="card_figure">
+          <img
+            class="card_img"
+            src="https://picsum.photos/id/1016/600/400"
+            alt=""
+          />
+        </figure>
+        <div>
+          <h2 class="card_title">タイトル</h2>
+          <p class="card_text">
+            サンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキストサンプルテキスト
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="bottom">
+      <p class="bottom_text bottom_text__left js-bottom_left">WELCOME TO</p>
+      <p class="bottom_text bottom_text__rigth js-bottom_right">ICS MEDIA</p>
+    </section>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      // 上のスクロールインジケーター
+      const barTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: true,
+        },
+      });
+      barTl.fromTo(".header-line_inner", { width: 0 }, { width: "100%" });
+
+      //トップの画像パララックス
+      const topTl  = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".top",
+          start: "top top",
+          end: "bottom top",
+          scrub: 1,
+        },
+      });
+      topTl.addLabel("topLabel")
+      document.querySelectorAll(".top_title span").forEach((el, index) => {
+        console.log(el)
+        topTl.to(el, {
+          y: -50,
+          duration: 0.1
+        }, `topLabel+=${index / 20}`)
+      })
+      topTl.to(".top", {
+        backgroundPositionY: 50,
+        duration: 1
+      }, "topLabel");
+
+
+      // カード
+      document.querySelectorAll(".card").forEach((el) => {
+        const img = el.querySelector(".card_figure img");
+        const title = el.querySelector(".card_title");
+        const text = el.querySelector(".card_text");
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: el,
+            start: "top 80p%",
+            end: `+=${window.innerHeight / 2}`,
+            scrub: 2,
+          },
+        });
+        tl.fromTo(
+          title,
+          { y: 50 },
+          {
+            y: -50,
+            ease: "none",
+            duration: 1,
+          },
+          ""
+        );
+        tl.fromTo(
+          text,
+          { y: 50 },
+          {
+            y: -50,
+            ease: "none",
+            duration: 2,
+          },
+          "<"
+        );
+        tl.to(img, { scale: 1.2, ease: "none", duration: 2 }, "-=0.5");
+      });
+
+      // 下部
+
+      ScrollTrigger.create({
+        trigger: ".bottom",
+        start: "top 50%",
+        toggleClass: "is-crossed",
+      });
+      const bottomTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".bottom",
+          start: "top bottom",
+          end: "center center",
+          scrub: 1,
+        },
+      });
+      bottomTl
+        .fromTo(
+          ".js-bottom_left",
+          {
+            xPercent: -100,
+          },
+          { xPercent: 0 }
+        )
+        .fromTo(
+          ".js-bottom_right",
+          {
+            xPercent: 100,
+          },
+          { xPercent: 0 },
+          "<"
+        );
+    </script>
+  </body>
+</html>

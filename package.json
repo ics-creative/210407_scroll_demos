@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
+    "dev": "yarn run server & yarn run sass",
     "server": "live-server",
-    "sass": "sass --watch style.scss:style.css"
+    "sass": "sass styles --watch"
   },
   "devDependencies": {
     "live-server": "^1.2.1",
