@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style></style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="./styles/style_03.css" />
+  </head>
+  <body>
+    <section class="top">
+      <div class="top_title">
+        <span class="top_title_innerLeft">Hello</span
+        ><span class="top_title_innerRight">World</span>
+      </div>
+    </section>
+    <section class="section js-section-card">
+      <article class="article">
+        <img class="article_image" src="https://picsum.photos/seed/80/1200/900" alt="" />
+        <p class="article_text">
+          サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。
+        </p>
+      </article>
+    </section>
+    <section class="cardSection">
+      <div class="cards_wrapper">
+        <ul class="cards">
+          <li class="singleCard">
+            <img
+              class="singleCard_image"
+              src="https://picsum.photos/seed/1/300/400"
+              alt=""
+            />
+            <p class="singleCard_text">01</p>
+          </li>
+          <li class="singleCard">
+            <img
+              class="singleCard_image"
+              src="https://picsum.photos/seed/2/300/400"
+              alt=""
+            />
+            <p class="singleCard_text">02</p>
+          </li>
+          <li class="singleCard">
+            <img
+              class="singleCard_image"
+              src="https://picsum.photos/seed/3/300/400"
+              alt=""
+            />
+            <p class="singleCard_text">03</p>
+          </li>
+          <li class="singleCard">
+            <img
+              class="singleCard_image"
+              src="https://picsum.photos/seed/4/300/400"
+              alt=""
+            />
+            <p class="singleCard_text">04</p>
+          </li>
+          <li class="singleCard">
+            <img
+              class="singleCard_image"
+              src="https://picsum.photos/seed/5/300/400"
+              alt=""
+            />
+            <p class="singleCard_text">05</p>
+          </li>
+          <li class="singleCard">
+            <img
+              class="singleCard_image"
+              src="https://picsum.photos/seed/6/300/400"
+              alt=""
+            />
+            <p class="singleCard_text">06</p>
+          </li>
+          <li class="singleCard">
+            <img
+              class="singleCard_image"
+              src="https://picsum.photos/seed/7/300/400"
+              alt=""
+            />
+            <p class="singleCard_text">07</p>
+          </li>
+          <li class="singleCard">
+            <img
+              class="singleCard_image"
+              src="https://picsum.photos/seed/8/300/400"
+              alt=""
+            />
+            <p class="singleCard_text">08</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="bottom"></section>
+    <script defer>
+      gsap.registerPlugin(ScrollTrigger);
+
+      // キービジュアル
+      const topTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".top",
+          start: "top top",
+          scrub: true,
+          pin: true,
+        },
+      });
+      topTl.fromTo(
+        ".top_title",
+        {
+          opacity: 0,
+          scale: 0.2,
+        },
+        { opacity: 1, scale: 1, ease: "Power4.out" }
+      );
+      topTl.to(".top_title_innerLeft", {
+        x: -innerWidth / 2,
+      });
+      topTl.to(
+        ".top_title_innerRight",
+        {
+          x: innerWidth / 2,
+        },
+        "<"
+      );
+
+      // 説明コンテンツ
+
+      const pictureTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".article_image",
+          start: "top 80",
+          endTrigger: ".article_text",
+          end: `top 80`,
+          scrub: true,
+          pin: true,
+          pinSpacing: false,
+        },
+      });
+      pictureTl.fromTo(".article_image", { scale: 1 }, { scale: 0.5 });
+
+      // カード
+      const cardTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".cardSection",
+          start: "top top",
+          pin: true,
+          end: `+=${innerHeight}`,
+          scrub: 0.5,
+        },
+      });
+
+      const target = document.querySelector(".cards");
+      cardTl.to(target, {
+        delay: 0.1,
+        x: -target.clientWidth + innerWidth - 120,
+        ease: "none",
+      });
+
+      window.addEventListener("load", () => {
+        ScrollTrigger.refresh();
+      });
+    </script>
+  </body>
+</html>

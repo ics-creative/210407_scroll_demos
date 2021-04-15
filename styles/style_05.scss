@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #333333;
+}
+
+img {
+  width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto 80px;
+}
+
+.refresh {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 16px;
+}

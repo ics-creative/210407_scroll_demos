@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <style></style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="./styles/style_05.css" />
+  </head>
+  <body>
+        <button class="refresh">refresh</button>
+        <div class="dummy"></div>
+        <img class="article_image" src="" alt="" />
+        <img class="article_image" src="" alt="" />
+        <img class="article_image" src="" alt="" />
+        <img class="article_image" src="" alt="" />
+        <img class="article_image" src="" alt="" />
+
+    <script defer>
+      gsap.registerPlugin(ScrollTrigger);
+
+      document.querySelectorAll("img").forEach((el) => {
+        ScrollTrigger.create({
+          trigger: el,
+          start: "top 80",
+          end: `+=100%`,
+          scrub: true,
+          pin: true,
+        });
+      });
+
+      setTimeout(() => {
+        document.querySelectorAll("img").forEach(el => {
+          el.src = `https://picsum.photos/seed/${Math.round(Math.random() * 1000)}/1200/900`
+        })
+      }, 1000)
+
+
+      const refreshButton = document.querySelector(".refresh");
+      refreshButton.addEventListener("click", () => {
+        ScrollTrigger.refresh();
+      });
+    </script>
+  </body>
+</html>
