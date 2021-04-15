@@ -68,23 +68,17 @@ body {
 .article {
   position: relative;
   width: 100%;
+  margin-bottom: 150px;
 
-  &_imageWrapper {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    margin-bottom: 150px;
-  }
   &_image {
     display: block;
     width: 100%;
     height: auto;
-    transform-origin: left center;
+    transform-origin: left top;
     border-radius: 12px;
     border: 10px solid #ffffff;
     box-sizing: border-box;
+    margin-bottom: 100px;
   }
   &_text {
     width: 40%;

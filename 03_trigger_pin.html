@@ -10,17 +10,14 @@
   </head>
   <body>
     <section class="top">
-      <div class="top_title"><span class="top_title_innerLeft">Hello</span><span class="top_title_innerRight">World</span></div>
+      <div class="top_title">
+        <span class="top_title_innerLeft">Hello</span
+        ><span class="top_title_innerRight">World</span>
+      </div>
     </section>
     <section class="section js-section-card">
       <article class="article">
-        <div class="article_imageWrapper">
-        <img
-          class="article_image"
-          src="https://picsum.photos/seed/80/1200/900"
-          alt=""
-        />
-        </div>
+        <img class="article_image" src="https://picsum.photos/seed/80/1200/900" alt="" />
         <p class="article_text">
           サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。
         </p>
@@ -105,7 +102,6 @@
         scrollTrigger: {
           trigger: ".top",
           start: "top top",
-          // end: "+=100%",
           scrub: true,
           pin: true,
         },
@@ -119,27 +115,30 @@
         { opacity: 1, scale: 1, ease: "Power4.out" }
       );
       topTl.to(".top_title_innerLeft", {
-        x: -innerWidth / 2
-      })
-      topTl.to(".top_title_innerRight", {
-        x: innerWidth / 2
-      }, "<")
+        x: -innerWidth / 2,
+      });
+      topTl.to(
+        ".top_title_innerRight",
+        {
+          x: innerWidth / 2,
+        },
+        "<"
+      );
 
       // 説明コンテンツ
-      window.addEventListener("load", () => {
 
-        const pictureTl = gsap.timeline({
-          scrollTrigger: {
-            trigger: ".article_imageWrapper",
-            start: "top top",
-            endTrigger: ".article_text",
-            end: `center center`,
-            scrub: true,
-            pin: true,
-            pinSpacing: false,
-          },
-        });
-        pictureTl.fromTo(".article_image", {scale: 1}, {scale: 0.5});
+      const pictureTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".article_image",
+          start: "top 80",
+          endTrigger: ".article_text",
+          end: `top 80`,
+          scrub: true,
+          pin: true,
+          pinSpacing: false,
+        },
+      });
+      pictureTl.fromTo(".article_image", { scale: 1 }, { scale: 0.5 });
 
       // カード
       const cardTl = gsap.timeline({
@@ -158,8 +157,10 @@
         x: -target.clientWidth + innerWidth - 120,
         ease: "none",
       });
-      })
 
+      window.addEventListener("load", () => {
+        ScrollTrigger.refresh();
+      });
     </script>
   </body>
 </html>
