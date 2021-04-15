@@ -14,11 +14,13 @@
     </section>
     <section class="section js-section-card">
       <article class="article">
+        <div class="article_imageWrapper">
         <img
           class="article_image"
           src="https://picsum.photos/seed/80/1200/900"
           alt=""
         />
+        </div>
         <p class="article_text">
           サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。
         </p>
@@ -124,17 +126,20 @@
       }, "<")
 
       // 説明コンテンツ
-      const pictureTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".article_image",
-          start: "top 80",
-          end: `+=${innerHeight}`,
-          scrub: true,
-          pin: true,
-          pinSpacing: false,
-        },
-      });
-      pictureTl.fromTo(".article_image", { scale: 1 }, { scale: 0.5 });
+      window.addEventListener("load", () => {
+
+        const pictureTl = gsap.timeline({
+          scrollTrigger: {
+            trigger: ".article_imageWrapper",
+            start: "top top",
+            endTrigger: ".article_text",
+            end: `center center`,
+            scrub: true,
+            pin: true,
+            pinSpacing: false,
+          },
+        });
+        pictureTl.fromTo(".article_image", {scale: 1}, {scale: 0.5});
 
       // カード
       const cardTl = gsap.timeline({
@@ -146,12 +151,15 @@
           scrub: 0.5,
         },
       });
+
       const target = document.querySelector(".cards");
       cardTl.to(target, {
         delay: 0.1,
         x: -target.clientWidth + innerWidth - 120,
         ease: "none",
       });
+      })
+
     </script>
   </body>
 </html>
