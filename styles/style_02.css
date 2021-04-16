@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eee;
+}
+
+.header-line {
+  height: 15px;
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+.header-line_inner {
+  content: "";
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 20px;
+  background: #158AFF;
+}
+
+.top {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.top_image {
+  position: absolute;
+  top: 15vh;
+  left: 0;
+  height: 80vh;
+  width: 90%;
+  background: url("https://picsum.photos/id/10/1920/1200") no-repeat;
+}
+.top_title {
+  font-size: 180px;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.18);
+  z-index: 1;
+}
+.top_title > span {
+  display: inline-block;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 150px;
+}
+
+.card {
+  width: 1000px;
+  height: 300px;
+  margin-top: 200px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  font-size: 16px;
+}
+.card_figure {
+  width: 600px;
+  height: 300px;
+  overflow: hidden;
+}
+.card_img {
+  width: 100%;
+  height: auto;
+}
+.card_title {
+  margin-bottom: 20px;
+}
+.card_text {
+  line-height: 1.8;
+}
+
+.bottom {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.7s ease-out;
+  overflow: hidden;
+}
+.bottom_text {
+  font-size: 180px;
+  font-weight: bold;
+}
+.bottom.is-crossed {
+  background: #333333;
+}
+.bottom.is-crossed .bottom_text {
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=style_02.css.map */

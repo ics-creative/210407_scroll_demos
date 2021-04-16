@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background: #333333;
+}
+
+.top {
+  width: 100%;
+  height: 100vh;
+  background: url("https://picsum.photos/id/1021/1920/1200") no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.top_title {
+  font-size: 120px;
+  color: #fff;
+  font-family: "EB Garamond", serif;
+}
+.top_title_innerLeft, .top_title_innerRight {
+  display: inline-block;
+}
+
+.cards {
+  display: inline-flex;
+  gap: 150px;
+}
+.cards_wrapper {
+  max-width: 100%;
+  padding: 0 50px;
+  overflow: hidden;
+}
+
+.singleCard {
+  position: relative;
+}
+.singleCard_image {
+  width: 300px;
+  height: 400px;
+}
+.singleCard_text {
+  position: absolute;
+  bottom: 10px;
+  right: -8%;
+  font-size: 80px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.18);
+}
+
+.section {
+  padding: 80px 50px;
+}
+
+.cardSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.article {
+  position: relative;
+  width: 100%;
+  margin-bottom: 150px;
+}
+.article_image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform-origin: left top;
+  border-radius: 12px;
+  border: 10px solid #ffffff;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+}
+.article_text {
+  width: 40%;
+  color: #f4f4f4;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-left: auto;
+}
+
+/*# sourceMappingURL=style_03.css.map */
