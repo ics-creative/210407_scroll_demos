@@ -95,7 +95,7 @@ body {
   overflow: hidden;
 }
 .bottom_text {
-  font-size: 180px;
+  font-size: 12vw;
   font-weight: bold;
 }
 .bottom.is-crossed {

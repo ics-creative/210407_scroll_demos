@@ -17,7 +17,11 @@
     </section>
     <section class="section js-section-card">
       <article class="article">
-        <img class="article_image" src="https://picsum.photos/seed/80/1200/900" alt="" />
+        <img
+          class="article_image"
+          src="https://picsum.photos/seed/80/1200/900"
+          alt=""
+        />
         <p class="article_text">
           サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。
         </p>
@@ -102,6 +106,7 @@
         scrollTrigger: {
           trigger: ".top",
           start: "top top",
+          end: "+=900",
           scrub: true,
           pin: true,
         },
@@ -127,18 +132,14 @@
 
       // 説明コンテンツ
 
-      const pictureTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".article_image",
-          start: "top 80",
-          endTrigger: ".article_text",
-          end: `top 80`,
-          scrub: true,
-          pin: true,
-          pinSpacing: false,
-        },
+      ScrollTrigger.create({
+        trigger: ".article_image",
+        start: "top 80",
+        endTrigger: ".article_text",
+        end: `center 40%`,
+        pin: true,
+        pinSpacing: false,
       });
-      pictureTl.fromTo(".article_image", { scale: 1 }, { scale: 0.5 });
 
       // カード
       const cardTl = gsap.timeline({

@@ -59,6 +59,7 @@ body {
 
 .section {
   padding: 80px 50px;
+  min-height: 150vh;
 }
 .cardSection {
   min-height: 100vh;
@@ -70,9 +71,10 @@ body {
   width: 100%;
   margin-bottom: 150px;
 
+
   &_image {
     display: block;
-    width: 100%;
+    width: 70%;
     height: auto;
     transform-origin: left top;
     border-radius: 12px;
@@ -81,10 +83,14 @@ body {
     margin-bottom: 100px;
   }
   &_text {
+    position: relative;
     width: 40%;
     color: #f4f4f4;
     font-size: 18px;
     line-height: 1.8;
     margin-left: auto;
+    z-index: 2;
+    background: rgba(0,0,0,0.9);
+    padding: 20px;
   }
 }
