@@ -19,7 +19,7 @@
     <script defer>
       gsap.registerPlugin(ScrollTrigger);
 
-      document.querySelectorAll("img").forEach((el) => {
+      document.querySelectorAll("img").forEach((el, index) => {
         ScrollTrigger.create({
           trigger: el,
           start: "top 80",
