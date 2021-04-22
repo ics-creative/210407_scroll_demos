@@ -102,7 +102,6 @@
   }
 }
 .likeButton {
-  cursor: pointer;
   opacity: 0;
   position: absolute;
   left: 50%;
@@ -133,74 +132,74 @@
   transform: scale(0.8);
   transform-origin: 250px 250px;
 }
-.likeButton.clicked {
+.likeButton.is-active {
   opacity: 1;
 }
-.likeButton.clicked .explosion {
+.likeButton.is-active .explosion {
   animation: explosionAnime 800ms;
   animation-fill-mode: forwards;
 }
-.likeButton.clicked .heart {
+.likeButton.is-active .heart {
   animation: heartAnime 800ms;
   animation-fill-mode: forwards;
 }
-.likeButton.clicked .particleLayer {
+.likeButton.is-active .particleLayer {
   animation: particleLayerAnime 800ms;
   animation-fill-mode: forwards;
 }
-.likeButton.clicked .particleLayer circle:nth-child(1) {
+.likeButton.is-active .particleLayer circle:nth-child(1) {
   animation: particleAnimate1 800ms;
   animation-fill-mode: forwards;
 }
-.likeButton.clicked .particleLayer circle:nth-child(2) {
+.likeButton.is-active .particleLayer circle:nth-child(2) {
   animation: particleAnimate2 800ms;
   animation-fill-mode: forwards;
 }
-.likeButton.clicked .particleLayer circle:nth-child(3) {
+.likeButton.is-active .particleLayer circle:nth-child(3) {
   animation: particleAnimate3 800ms;
   animation-fill-mode: forwards;
 }
-.likeButton.clicked .particleLayer circle:nth-child(4) {
+.likeButton.is-active .particleLayer circle:nth-child(4) {
   animation: particleAnimate4 800ms;
   animation-fill-mode: forwards;
 }
-.likeButton.clicked .particleLayer circle:nth-child(5) {
+.likeButton.is-active .particleLayer circle:nth-child(5) {
   animation: particleAnimate5 800ms;
   animation-fill-mode: forwards;
 }
-.likeButton.clicked .particleLayer circle:nth-child(6) {
+.likeButton.is-active .particleLayer circle:nth-child(6) {
   animation: particleAnimate6 800ms;
   animation-fill-mode: forwards;
 }
-.likeButton.clicked .particleLayer circle:nth-child(7) {
+.likeButton.is-active .particleLayer circle:nth-child(7) {
   animation: particleAnimate7 800ms;
   animation-fill-mode: forwards;
 }
-.likeButton.clicked .particleLayer circle:nth-child(8) {
+.likeButton.is-active .particleLayer circle:nth-child(8) {
   animation: particleAnimate8 800ms;
   animation-fill-mode: forwards;
 }
-.likeButton.clicked .particleLayer circle:nth-child(9) {
+.likeButton.is-active .particleLayer circle:nth-child(9) {
   animation: particleAnimate9 800ms;
   animation-fill-mode: forwards;
 }
-.likeButton.clicked .particleLayer circle:nth-child(10) {
+.likeButton.is-active .particleLayer circle:nth-child(10) {
   animation: particleAnimate10 800ms;
   animation-fill-mode: forwards;
 }
-.likeButton.clicked .particleLayer circle:nth-child(11) {
+.likeButton.is-active .particleLayer circle:nth-child(11) {
   animation: particleAnimate11 800ms;
   animation-fill-mode: forwards;
 }
-.likeButton.clicked .particleLayer circle:nth-child(12) {
+.likeButton.is-active .particleLayer circle:nth-child(12) {
   animation: particleAnimate12 800ms;
   animation-fill-mode: forwards;
 }
-.likeButton.clicked .particleLayer circle:nth-child(13) {
+.likeButton.is-active .particleLayer circle:nth-child(13) {
   animation: particleAnimate13 800ms;
   animation-fill-mode: forwards;
 }
-.likeButton.clicked .particleLayer circle:nth-child(14) {
+.likeButton.is-active .particleLayer circle:nth-child(14) {
   animation: particleAnimate14 800ms;
   animation-fill-mode: forwards;
 }
